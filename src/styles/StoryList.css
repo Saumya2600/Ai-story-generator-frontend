@@ -1,0 +1,123 @@
+.story-list {
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  
+  .story-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 221, 235, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .story-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 221, 235, 0.3);
+  }
+  
+  .story-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .story-summary p {
+    margin: 0;
+    font-size: 14px;
+    color: #00ddeb;
+    flex: 1;
+  }
+  
+  .story-summary .snippet {
+    color: #d1d1d1;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .story-details {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    display: none;
+  }
+  
+  .story-details.open {
+    display: block;
+  }
+  
+  .story-details p {
+    font-size: 12px;
+    color: #d1d1d1;
+    margin-bottom: 5px;
+  }
+  
+  .story-details p strong {
+    color: #00ddeb;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .story-details .button {
+    flex: 1;
+    padding: 8px;
+    background: linear-gradient(45deg, #00ddeb, #9b59b6);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 12px;
+  }
+  
+  .story-details .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 221, 235, 0.5);
+  }
+  
+  .story-details .button-stop {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+  }
+  
+  .story-details .button-stop:hover {
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+  }
+  
+  .story-details .button-delete {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+  }
+  
+  .story-details .button-delete:hover {
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+  }
+  
+  @media (max-width: 600px) {
+    .story-list {
+      max-width: 100%;
+    }
+  
+    .story-summary p {
+      font-size: 12px;
+    }
+  
+    .story-summary .snippet {
+      font-size: 10px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .story-details .button {
+      width: 100%;
+      font-size: 10px;
+    }
+  }

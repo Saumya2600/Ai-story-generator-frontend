@@ -1,0 +1,183 @@
+.auth-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(155, 89, 182, 0.3);
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+.auth-container h2 {
+  color: #00ddeb;
+  text-shadow: 0 0 10px rgba(0, 221, 235, 0.5);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  color: #d1d1d1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.tab:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tab:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tab.active {
+  background: linear-gradient(45deg, #9b59b6, #00ddeb);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d1d1;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.auth-container input:focus {
+  outline: none;
+  border: 1px solid #00ddeb;
+  box-shadow: 0 0 10px rgba(0, 221, 235, 0.3);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #9b59b6, #00ddeb);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 10px; /* Add spacing between buttons */
+}
+
+.auth-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
+}
+
+.auth-button.back-to-login {
+  background: linear-gradient(45deg, #e74c3c, #c0392b); /* Red gradient to indicate a "cancel" action */
+}
+
+.auth-button.back-to-login:hover {
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+}
+
+.auth-container .error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Styles for the main app content and logout button */
+.app-content {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px;
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #d1d1d1;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.logout-button:hover {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+  transform: scale(1.05);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .auth-container h2 {
+    font-size: 20px;
+  }
+
+  .tab {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .auth-container input,
+  .auth-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .logout-button {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}

@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AuthPage from './pages/AuthPage';
+import NotFound from './pages/NotFound';
+import './styles/main.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return React.createElement(
+    Router,
+    null,
+    React.createElement(
+      Routes,
+      null,
+      React.createElement(Route, { path: '/', element: React.createElement(AuthPage) }),
+      React.createElement(Route, { path: '/auth', element: React.createElement(AuthPage) }),
+      React.createElement(Route, { path: '/home', element: React.createElement(Home) }),
+      React.createElement(Route, { path: '*', element: React.createElement(NotFound) })
+    )
   );
 }
 

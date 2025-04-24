@@ -1,0 +1,60 @@
+.story-display {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(155, 89, 182, 0.2);
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .story-display h2 {
+    color: #9b59b6;
+    text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+  }
+  
+  .story-display p {
+    font-size: 16px;
+    color: #d1d1d1;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .story-display .button {
+    background: linear-gradient(45deg, #9b59b6, #00ddeb);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .story-display .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+  }
+  
+  .story-display .button-stop {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+  }
+  
+  .story-display .button-stop:hover {
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+  }
+  
+  @media (max-width: 600px) {
+    .story-display {
+      max-width: 100%;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .story-display .button {
+      width: 100%;
+    }
+  }
